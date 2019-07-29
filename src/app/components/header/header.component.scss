@@ -1,0 +1,24 @@
+.height {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    width: 100%;
+}
+
+.color {
+    background-image: linear-gradient(to right, #57A0D3, #FFFFFF);
+    opacity: 0.6;
+}
+
+.logo {
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vh;
+    background-image: url('../../../assets/logo.jpg');
+    background-size: 100% 100%;
+    margin: 30px 50px;
+}
+
+.fields {
+    justify-content: end;
+} 
