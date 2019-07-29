@@ -11,6 +11,7 @@
 }
 
 .logo {
+    z-index: 1;
     border-radius: 50%;
     width: 10vh;
     height: 10vh;
@@ -19,6 +20,23 @@
     margin: 30px 50px;
 }
 
-.fields {
-    justify-content: end;
-} 
+.name {
+    background-color: #FFFFFF;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Pacifico";
+    width: 250px;
+    height: 75px;
+    text-align: center;
+    border: solid blue 2px;
+    border-radius: 50%;
+    opacity: .8;
+    margin-top: 28px;
+    margin-left: -65px;
+}
+
+.text-style {
+    background: -webkit-linear-gradient(#57A0D3, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
