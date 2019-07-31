@@ -5,30 +5,57 @@
         </mat-card-header>
         <mat-card-content>
             <div class="full-w row">
-                <mat-horizontal-stepper [linear]="true" #stepper>
-                    <!-- <mat-step [stepControl]="firstFormGroup">
-                        <form [formGroup]="firstFormGroup">
+                <mat-horizontal-stepper linear #stepper>
+                    <mat-step [stepControl]="formGroup1">
+                        <form [formGroup]="formGroup1">
                             <ng-template matStepLabel>Fill out your name</ng-template>
-                            <mat-form-field>
-                                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-                            </mat-form-field>
-                            <div>
-                                <button mat-button matStepperNext>Next</button>
-                            </div>
+                            <mat-checkbox formControlName="pergunta1">Checked1</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta2">Checked2</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta3">Checked3</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta4">Checked4</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta5">Checked5</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta6">Checked6</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta7">Checked7</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta8">Checked8</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta9">Checked9</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta10">Checked10</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta11">Checked11</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta12">Checked12</mat-checkbox>
                         </form>
+                        <div>
+                            <button mat-button matStepperNext>Next</button>
+                        </div>
                     </mat-step>
-                    <mat-step [stepControl]="secondFormGroup">
-                        <form [formGroup]="secondFormGroup">
+                    <mat-step [stepControl]="formGroup2">
+                        <form [formGroup]="formGroup2">
                             <ng-template matStepLabel>Fill out your address</ng-template>
-                            <mat-form-field>
-                                <input matInput placeholder="Address" formControlName="secondCtrl" required>
-                            </mat-form-field>
+                            <mat-checkbox formControlName="pergunta13">Checked13</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta14">Checked14</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta15">Checked15</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta16">Checked16</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta17">Checked17</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta18">Checked18</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta19">Checked19</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta20">Checked20</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta21">Checked21</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta22">Checked22</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta23">Checked23</mat-checkbox>
+                            <mat-checkbox formControlName="pergunta24">Checked24</mat-checkbox>
+                        </form>
+                        <div>
+                            <button mat-button matStepperPrevious>Back</button>
+                            <button mat-button matStepperNext>Next</button>
+                        </div>
+                    </mat-step>
+                    <!-- <mat-step [stepControl]="formGroup3">
+                        <form [formGroup]="formGroup3">
+                            <ng-template matStepLabel>Fill out your address</ng-template>
                             <div>
                                 <button mat-button matStepperPrevious>Back</button>
                                 <button mat-button matStepperNext>Next</button>
                             </div>
                         </form>
-                    </mat-step>
+                    </mat-step> -->
                     <mat-step>
                         <ng-template matStepLabel>Done</ng-template>
                         You are now done.
@@ -36,7 +63,7 @@
                             <button mat-button matStepperPrevious>Back</button>
                             <button mat-button (click)="stepper.reset()">Reset</button>
                         </div>
-                    </mat-step> -->
+                    </mat-step>
                 </mat-horizontal-stepper>
             </div>
         </mat-card-content>
