@@ -9,6 +9,7 @@ import { MaterialImportsModule } from './material-imports';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PerguntasComponent } from './components/perguntas/perguntas.component';
 
 
 
@@ -25,7 +26,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     HomeComponent,
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    PerguntasComponent
   ],
   exports: [
   ],

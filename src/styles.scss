@@ -20,3 +20,30 @@ html, body {
 .full-h {
     height: 100%;
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-dialog-container {
+    opacity: 0.9 !important;
+    border-radius: 50px !important;
+}
+
+.center-h {
+    align-items: center;
+}
+
+.center-w {
+    justify-content: center;
+}
+
+.opacity-low {
+    opacity: 0.9;
+}

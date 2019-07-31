@@ -1,0 +1,64 @@
+.formGroup {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.mx {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.sub-title {
+    font-size: 20px;
+}
+
+.text-style {
+    background: -webkit-linear-gradient(#57A0D3, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.button-line {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.button {
+    margin-top: 20px;
+    height: 40px;
+    width: 120px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.normal-color {
+    background: -webkit-linear-gradient(#57A0D3, #FFFFFF);
+}
+
+.cancel-color {
+    background: -webkit-linear-gradient(#FF0800, #FFFFFF);
+}
+
+.alert-message {
+    font-size: 20px;
+    margin: 10px;
+    color: #FF0800;
+}
+
+.position-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mb-no {
+    margin-bottom: 0px !important;
+}

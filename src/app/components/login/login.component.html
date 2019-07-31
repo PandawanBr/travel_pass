@@ -1,18 +1,30 @@
-<h1 mat-dialog-title>Travel Pass Login</h1>
+<div mat-dialog-title class="full-w position-center mb-no">
+  <h1 class="title text-style">Travel Pass Login</h1>
+</div>
 <div mat-dialog-content>
-  <p>Insira o Login e Senha</p>
-  <form [formGroup]="formGroup" novalidate>
-    <mat-form-field>
+  <div class="full-w position-center">
+    <span class="sub-title text-style">Insira o Login e Senha</span >
+  </div>
+  <form [formGroup]="formGroup" novalidate class="formGroup">
+    <mat-form-field class="full-w mx">
       <input formControlName='login' matInput placeholder="Login" required>
+      <mat-error *ngIf="formGroup.get('login').touched && formGroup.get('login').errors?.required">
+        Campo não pode estar vazio
+      </mat-error>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field class="full-w mx">
       <input formControlName='password' matInput placeholder="Senha" required>
+      <mat-error *ngIf="formGroup.get('password').touched && formGroup.get('password').errors?.required">
+        Campo não pode estar vazio
+      </mat-error>
     </mat-form-field>
   </form>  
 
-  <span *ngIf="message">{{message}}</span>
+  <div class="full-w alert-message position-center">
+    <span *ngIf="message">{{message}}</span>
+  </div>
 </div>
-<div mat-dialog-actions>
-  <button mat-button mat-dialog-close>Cancelar</button>
-  <button mat-button (click)="login()" cdkFocusInitial>Logar</button>
+<div mat-dialog-actions class="button-line">
+  <button mat-button mat-dialog-close class="button cancel-color">Cancelar</button>
+  <button mat-button (click)="login()" class="button normal-color" cdkFocusInitial>Logar</button>
 </div>
