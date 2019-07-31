@@ -7,21 +7,30 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { MaterialImportsModule } from './material-imports';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './components/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    HomeComponent,
-    AppComponent
-  ],
   imports: [
     CommonModule,
     AppRoutingModule,
     MaterialImportsModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
+  ],
+  declarations: [
+    HeaderComponent,
+    HomeComponent,
+    AppComponent,
+    LoginComponent
+  ],
+  exports: [
+  ],
+  entryComponents: [
+    LoginComponent
   ],
   bootstrap: [ AppComponent ]
 })

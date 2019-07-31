@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Travel Pass Login</h1>
+<div mat-dialog-content>
+  <p>Insira o Login e Senha</p>
+  <form [formGroup]="formGroup" novalidate>
+    <mat-form-field>
+      <input formControlName='login' matInput placeholder="Login" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input formControlName='password' matInput placeholder="Senha" required>
+    </mat-form-field>
+  </form>  
+
+  <span *ngIf="message">{{message}}</span>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button (click)="login()" cdkFocusInitial>Logar</button>
+</div>

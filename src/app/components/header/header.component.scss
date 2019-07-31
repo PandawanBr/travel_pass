@@ -1,8 +1,11 @@
 .height {
     display: flex;
     flex-direction: row;
-    height: 10vh;
+    height: 25vh;
     width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .color {
@@ -17,7 +20,8 @@
     height: 10vh;
     background-image: url('../../../assets/logo.jpg');
     background-size: 100% 100%;
-    margin: 30px 50px;
+    margin-left: 30px;
+    margin-top: 15px;
 }
 
 .name {
@@ -28,11 +32,11 @@
     width: 250px;
     height: 75px;
     text-align: center;
-    border: solid blue 2px;
+    // border: solid blue 2px;
     border-radius: 50%;
     opacity: .8;
-    margin-top: 28px;
-    margin-left: -65px;
+    margin-top: 15px;
+    margin-left: 0px;
 }
 
 .text-style {
