@@ -1,6 +1,10 @@
 {
   "extends": "tslint:recommended",
   "rules": {
+    "curly": [
+      true,
+      "ignore-same-line"
+    ],
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {
@@ -20,10 +24,6 @@
       "element",
       "app",
       "kebab-case"
-    ],
-    "import-blacklist": [
-      true,
-      "rxjs/Rx"
     ],
     "interface-name": false,
     "max-classes-per-file": false,

@@ -1,50 +1,68 @@
 <div class="full-w row center-w">
     <mat-card class="card col opacity-low">
         <mat-card-header>
-            <mat-card-title>Questionario</mat-card-title>
+            <mat-card-title class="text-style title">Questionario</mat-card-title>
         </mat-card-header>
         <mat-card-content>
             <div class="full-w row">
-                <mat-horizontal-stepper linear #stepper>
+                <mat-horizontal-stepper [linear]='true' #stepper class="full-w">
                     <mat-step [stepControl]="formGroup1">
                         <form [formGroup]="formGroup1">
-                            <ng-template matStepLabel>Fill out your name</ng-template>
-                            <mat-checkbox formControlName="pergunta1">Checked1</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta2">Checked2</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta3">Checked3</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta4">Checked4</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta5">Checked5</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta6">Checked6</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta7">Checked7</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta8">Checked8</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta9">Checked9</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta10">Checked10</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta11">Checked11</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta12">Checked12</mat-checkbox>
+                            <ng-template matStepLabel>Locais de preferencia</ng-template>
+                            <div class="full-w row">
+                                <div class="full-w col">
+                                    <mat-checkbox formControlName="pergunta1" [required]='form1Required'>Brasil</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta2" [required]='form1Required'>Inglaterra</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta3" [required]='form1Required'>Irlanda</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta4" [required]='form1Required'>França</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta5" [required]='form1Required'>Nova York</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta6" [required]='form1Required'>Orlando</mat-checkbox>
+                                </div>
+
+                                <div class="full-w col">
+                                    <mat-checkbox formControlName="pergunta7" [required]='form1Required'>Peru</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta8" [required]='form1Required'>Chile</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta9" [required]='form1Required'>África do Sul</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta10" [required]='form1Required'>China</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta11" [required]='form1Required'>Taiwan</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta12" [required]='form1Required'>Japão</mat-checkbox>
+                                </div>
+                            </div>
                         </form>
-                        <div>
-                            <button mat-button matStepperNext>Next</button>
+                        <div class="full-w row end my-md">
+                            <button mat-button matStepperNext class="next">Próximo</button>
                         </div>
                     </mat-step>
                     <mat-step [stepControl]="formGroup2">
                         <form [formGroup]="formGroup2">
-                            <ng-template matStepLabel>Fill out your address</ng-template>
-                            <mat-checkbox formControlName="pergunta13">Checked13</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta14">Checked14</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta15">Checked15</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta16">Checked16</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta17">Checked17</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta18">Checked18</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta19">Checked19</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta20">Checked20</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta21">Checked21</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta22">Checked22</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta23">Checked23</mat-checkbox>
-                            <mat-checkbox formControlName="pergunta24">Checked24</mat-checkbox>
+                            <ng-template matStepLabel>Tipo de Viagem</ng-template>
+                            <div class="full-w row">
+                                <div class="full-w col">
+                                    <mat-checkbox formControlName="pergunta13" [required]='form2Required'>Aereo</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta14" [required]='form2Required'>Terrestre</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta15" [required]='form2Required'>Praia</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta16" [required]='form2Required'>Campo</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta17" [required]='form2Required'>Trilhas</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta18" [required]='form2Required'>Montanhas</mat-checkbox>
+                                </div>
+
+                                <div class="full-w col">
+                                    <mat-checkbox formControlName="pergunta19" [required]='form2Required'>Cidades Turísticas</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta20" [required]='form2Required'>Gastronômica</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta21" [required]='form2Required'>Férias</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta22" [required]='form2Required'>Trabalho</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta23" [required]='form2Required'>Cidades Históricas</mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta24" [required]='form2Required'>Cultural</mat-checkbox>
+                                </div>
+                            </div>
                         </form>
-                        <div>
-                            <button mat-button matStepperPrevious>Back</button>
-                            <button mat-button matStepperNext>Next</button>
+                        <div class="full-w row my-md">
+                            <div class="full-w row start">
+                                <button mat-button matStepperPrevious class="previous">Anterior</button>
+                            </div>
+                            <div class="full-w row end">
+                                <button mat-button matStepperNext class="next">Próximo</button>
+                            </div>
                         </div>
                     </mat-step>
                     <!-- <mat-step [stepControl]="formGroup3">
@@ -67,8 +85,5 @@
                 </mat-horizontal-stepper>
             </div>
         </mat-card-content>
-        <mat-card-actions>
-            <button mat-button>Ok</button>
-        </mat-card-actions>
     </mat-card>
 </div>

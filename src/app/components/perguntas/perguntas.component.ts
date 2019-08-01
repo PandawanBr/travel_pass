@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-perguntas',
@@ -12,6 +12,9 @@ export class PerguntasComponent implements OnInit {
   formGroup2: FormGroup;
   formGroup3: FormGroup;
 
+  form1Required = true;
+  form2Required = true;
+
 
   constructor(
     private fb: FormBuilder
@@ -21,7 +24,32 @@ export class PerguntasComponent implements OnInit {
   ngOnInit() {
     this.createForm1();
     this.createForm2();
-    // this.createForm3();
+
+    this.formGroup1.valueChanges.subscribe(value => {
+      let trueValue = 0;
+      Object.keys(value).forEach(key => {
+        if (this.formGroup1.get(key).value) trueValue += 1;
+      });
+
+      if (trueValue >= 6) {
+        this.form1Required = false;
+      } else {
+        this.form1Required = true;
+      }
+    });
+
+    this.formGroup2.valueChanges.subscribe(value => {
+      let trueValue = 0;
+      Object.keys(value).forEach(key => {
+        if (this.formGroup2.get(key).value) trueValue += 1;
+      });
+
+      if (trueValue >= 6) {
+        this.form2Required = false;
+      } else {
+        this.form2Required = true;
+      }
+    });
   }
 
   createForm1() {

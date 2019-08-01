@@ -47,3 +47,25 @@ html, body {
 .opacity-low {
     opacity: 0.9;
 }
+
+.end {
+    justify-content: flex-end;
+}
+
+.start {
+    justify-content: flex-start;
+}
+
+.mx-md {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.my-md {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: #000000;
+}

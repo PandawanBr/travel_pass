@@ -2,3 +2,21 @@
     width: 80%;
     border-radius: 25px;
 }
+
+.next {
+    background: -webkit-linear-gradient(#57A0D3, #FFFFFF);
+}
+
+.previous {
+    background: -webkit-linear-gradient(#FF0800, #FFFFFF);
+}
+
+.text-style {
+    background: -webkit-linear-gradient(#57A0D3, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title {
+    font-size: 30px;
+}
