@@ -10,6 +10,9 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PerguntasComponent } from './components/perguntas/perguntas.component';
+import { ListComponent } from './components/list/list.component';
+import { UserComponent } from './components/user/user.component';
+import { NewUserComponent } from './components/new-user/new-user.component';
 
 
 
@@ -27,7 +30,10 @@ import { PerguntasComponent } from './components/perguntas/perguntas.component';
     HomeComponent,
     AppComponent,
     LoginComponent,
-    PerguntasComponent
+    PerguntasComponent,
+    ListComponent,
+    UserComponent,
+    NewUserComponent
   ],
   exports: [
   ],

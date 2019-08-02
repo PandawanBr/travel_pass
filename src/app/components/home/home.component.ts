@@ -21,10 +21,14 @@ export class HomeComponent implements OnInit {
   login() {
     this.dialog.open(LoginComponent, {
       width: '500px',
+    }).afterClosed().subscribe(res => {
+      if (res) {
+        this.router.navigate(['/user']);
+      }
     });
   }
 
   cadastro() {
-    this.router.navigate(['/perguntas']);
+    this.router.navigate(['/filters']);
   }
 }

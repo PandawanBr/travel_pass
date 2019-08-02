@@ -1,7 +1,7 @@
 <div class="full-w row center-w">
     <mat-card class="card col opacity-low">
         <mat-card-header>
-            <mat-card-title class="text-style title">Questionario</mat-card-title>
+            <mat-card-title class="text-style title">Filtros de Busca</mat-card-title>
         </mat-card-header>
         <mat-card-content>
             <div class="full-w row">
@@ -41,8 +41,13 @@
                                 </div>
                             </div>
                         </form>
-                        <div class="full-w row end my-md">
-                            <button mat-button matStepperNext class="next">Próximo</button>
+                        <div class="full-w row my-md">
+                            <div class="full-w row start">
+                                <button mat-button (click)="homePage()" class="previous">Home Page</button>
+                            </div>
+                            <div class="full-w row end">
+                                <button mat-button matStepperNext class="next">Próximo</button>
+                            </div>
                         </div>
                     </mat-step>
                     <mat-step [stepControl]="formGroup2">
@@ -148,7 +153,7 @@
                                     <button mat-button matStepperNext class="next">Próximo</button>
                                 </div>
                                 <div class="full-w row end mx-md" *ngIf="isLogged">
-                                    <button mat-button matStepperNext class="next">Realizar Busca</button>
+                                    <button mat-button matStepperNext class="next" (click)="showList()">Realizar Busca</button>
                                 </div>
                             </div>
                         </form>
@@ -165,7 +170,7 @@
                                 <button mat-button (click)="stepper.reset()" class="previous">Limpar Formulário</button>
                             </div>
                             <div class="full-w row center-w mx-md">
-                                <button mat-button class="next">Cadastro</button>
+                                <button mat-button class="next" (click)="newUser()">Cadastro</button>
                             </div>
                         </div>
                     </mat-step>

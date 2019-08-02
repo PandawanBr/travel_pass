@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import * as moment from 'moment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perguntas',
@@ -21,7 +22,8 @@ export class PerguntasComponent implements OnInit {
   dataAtual;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) {
   }
 
@@ -101,5 +103,17 @@ export class PerguntasComponent implements OnInit {
       qtdCrianca: [0],
       qtdAdulto: [1, Validators.required],
     });
+  }
+
+  homePage() {
+    this.router.navigate(['/']);
+  }
+
+  newUser() {
+    this.router.navigate(['/new-user']);
+  }
+
+  showList() {
+    this.router.navigate(['/list']);
   }
 }

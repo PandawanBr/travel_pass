@@ -13,7 +13,7 @@
       </mat-error>
     </mat-form-field>
     <mat-form-field class="full-w mx">
-      <input formControlName='password' matInput placeholder="Senha" required>
+      <input formControlName='password' type="password" matInput placeholder="Senha" required>
       <mat-error *ngIf="formGroup.get('password').touched && formGroup.get('password').errors?.required">
         Campo não pode estar vazio
       </mat-error>

@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { PerguntasComponent } from './components/perguntas/perguntas.component';
+import { ListComponent } from './components/list/list.component';
+import { UserComponent } from './components/user/user.component';
+import { NewUserComponent } from './components/new-user/new-user.component';
 
 
 const routes: Routes = [
@@ -10,9 +13,21 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'perguntas',
+    path: 'filters',
     component: PerguntasComponent
-  }
+  },
+  {
+    path: 'list',
+    component: ListComponent
+  },
+  {
+    path: 'user',
+    component: UserComponent
+  },
+  {
+    path: 'new-user',
+    component: NewUserComponent
+  },
 ];
 
 @NgModule({
