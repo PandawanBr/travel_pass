@@ -23,6 +23,7 @@ import {
     MatRadioModule,
     MatAutocompleteModule,
     MatDatepickerModule,
+    MatNativeDateModule,
     MatTooltipModule,
     MatDialogModule,
     MatBottomSheetModule,
@@ -34,6 +35,7 @@ import {
         MatButtonToggleModule,
         MatToolbarModule,
         MatIconModule,
+        MatNativeDateModule,
         MatCardModule,
         MatMenuModule,
         MatFormFieldModule,
@@ -59,6 +61,7 @@ import {
     exports: [
         MatButtonModule,
         MatButtonToggleModule,
+        MatNativeDateModule,
         MatToolbarModule,
         MatIconModule,
         MatCardModule,
@@ -83,5 +86,5 @@ import {
         MatRadioModule,
         MatDialogModule
     ]
-  })
+})
 export class MaterialImportsModule { }

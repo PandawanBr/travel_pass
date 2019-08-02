@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-perguntas',
@@ -8,6 +9,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class PerguntasComponent implements OnInit {
 
+  isLogged = true;
+
   formGroup1: FormGroup;
   formGroup2: FormGroup;
   formGroup3: FormGroup;
@@ -15,6 +18,7 @@ export class PerguntasComponent implements OnInit {
   form1Required = true;
   form2Required = true;
 
+  dataAtual;
 
   constructor(
     private fb: FormBuilder
@@ -22,8 +26,10 @@ export class PerguntasComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.dataAtual = moment(Date.now()).format('YYYY-MM-DD');
     this.createForm1();
     this.createForm2();
+    this.createForm3();
 
     this.formGroup1.valueChanges.subscribe(value => {
       let trueValue = 0;
@@ -86,20 +92,14 @@ export class PerguntasComponent implements OnInit {
     });
   }
 
-  // createForm3() {
-  // this.formGroup1 = this.fb.group({
-  // pergunta1: [false],
-  // pergunta2: [false],
-  // pergunta3: [false],
-  // pergunta4: [false],
-  // pergunta5: [false],
-  // pergunta6: [false],
-  // pergunta7: [false],
-  // pergunta8: [false],
-  // pergunta9: [false],
-  // pergunta10: [false],
-  // pergunta11: [false],
-  // pergunta12: [false],
-  // });
-  // }
+  createForm3() {
+    this.formGroup3 = this.fb.group({
+      dataInicio: [this.dataAtual, Validators.required],
+      dataFim: [this.dataAtual, Validators.required],
+      valorMin: [0],
+      valorMax: [0],
+      qtdCrianca: [0],
+      qtdAdulto: [1, Validators.required],
+    });
+  }
 }

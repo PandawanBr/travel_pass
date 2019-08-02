@@ -20,7 +20,7 @@ import { PerguntasComponent } from './components/perguntas/perguntas.component';
     MaterialImportsModule,
     BrowserModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   declarations: [
     HeaderComponent,
@@ -34,6 +34,6 @@ import { PerguntasComponent } from './components/perguntas/perguntas.component';
   entryComponents: [
     LoginComponent
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
