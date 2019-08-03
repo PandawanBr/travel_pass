@@ -22,8 +22,10 @@ export class HomeComponent implements OnInit {
     this.dialog.open(LoginComponent, {
       width: '500px',
     }).afterClosed().subscribe(res => {
-      if (res) {
+      if (res === 'login') {
         this.router.navigate(['/user']);
+      } else if (res === 'new-user') {
+        this.router.navigate(['/new-user']);
       }
     });
   }

@@ -1,0 +1,26 @@
+.card {
+    width: 60%;
+    border-radius: 25px;
+}
+
+.text-style {
+    background: -webkit-linear-gradient(#57A0D3, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.button {
+    margin-top: 20px;
+    height: 40px;
+    width: 150px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.normal-color {
+    background: -webkit-linear-gradient(#57A0D3, #FFFFFF);
+}

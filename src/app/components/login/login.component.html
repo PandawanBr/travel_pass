@@ -3,7 +3,7 @@
 </div>
 <div mat-dialog-content>
   <div class="full-w position-center">
-    <span class="sub-title text-style">Insira o Login e Senha</span >
+    <span class="sub-title text-style">Insira o Login e Senha</span>
   </div>
   <form [formGroup]="formGroup" novalidate class="formGroup">
     <mat-form-field class="full-w mx">
@@ -18,9 +18,10 @@
         Campo não pode estar vazio
       </mat-error>
     </mat-form-field>
-  </form>  
+  </form>
 
   <div class="full-w alert-message position-center">
+    <span (click)="newUser()" class="cadastro">Novo Usuário?</span>
     <span *ngIf="message">{{message}}</span>
   </div>
 </div>

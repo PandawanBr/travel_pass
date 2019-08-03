@@ -1,10 +1,51 @@
 <div class="full-w row center-w">
     <mat-card class="card col opacity-low">
         <mat-card-header>
-            <mat-card-title class="text-style title">Usuário Logado</mat-card-title>
+            <mat-card-title class="text-style title">Novo Usuário</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-
+            <form [formGroup]="formGroup" novalidate>
+                <div class="full-w row">
+                    <div class="full-w col mx-md">
+                        <mat-form-field>
+                            <input matInput placeholder="Nome" formControlName='nome'>
+                        </mat-form-field>
+                        <mat-form-field class="mt-md">
+                            <input matInput placeholder="E-mail" formControlName='email'>
+                        </mat-form-field>
+                        <mat-form-field class="mt-md">
+                            <input matInput placeholder="Cidade" formControlName='cidade'>
+                        </mat-form-field>
+                        <mat-form-field class="mt-md">
+                            <input matInput placeholder="Endereço" formControlName='endereco'>
+                        </mat-form-field>
+                    </div>
+                    <div class="full-w col mx-md">
+                        <mat-form-field>
+                            <input matInput placeholder="Sobrenome" formControlName='sobrenome'>
+                        </mat-form-field>
+                        <mat-form-field class="mt-md">
+                            <input matInput placeholder="Telefone" formControlName='telefone'>
+                        </mat-form-field>
+                        <mat-form-field class="mt-md">
+                            <input matInput placeholder="Bairro" formControlName='bairro'>
+                        </mat-form-field>
+                        <mat-form-field class="mt-md">
+                            <input matInput placeholder="Número" formControlName='numero'>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </form>
         </mat-card-content>
+        <mat-card-actions>
+            <div class="full-w row my-md">
+                <div class="full-w row end mx-md">
+                    <button mat-button (click)="homePage()" class="button normal-color">Home Page</button>
+                </div>
+                <div class="full-w row start mx-md">
+                    <button mat-button class="button normal-color">Cadastrar</button>
+                </div>
+            </div>
+        </mat-card-actions>
     </mat-card>
 </div>
