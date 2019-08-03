@@ -1,6 +1,23 @@
 .card {
     width: 50%;
+    height: calc(100vh - 300px);
     border-radius: 25px;
+}
+
+.list {
+    height: calc(100vh - 350px);
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.text-sm {
+    font-size: 16px;
+}
+
+.click {
+    cursor: pointer;
 }
 
 .text-style {
@@ -10,7 +27,37 @@
 }
 
 .card-item {
-    height: 30px;
+    height: 100px;
     border-bottom: 2px solid #FFC60B;
     border-right: 2px solid #FFC60B;
+}
+
+.image {
+    width: 80px;
+    height: 80px;
+    border-radius: 20%;
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+}
+
+.button {
+    height: 40px;
+    width: 150px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.normal-color {
+    background: -webkit-linear-gradient(#57A0D3, #FFFFFF);
+}
+
+.cancel-color {
+    background: -webkit-linear-gradient(#FF0800, #FFFFFF);
+}
+
+.button-line {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
 }

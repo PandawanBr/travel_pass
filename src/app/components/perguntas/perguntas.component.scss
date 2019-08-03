@@ -1,13 +1,17 @@
 .card {
-    width: 80%;
+    width: 60%;
     border-radius: 25px;
 }
 
 .next {
+    font-size: 15px;
+    font-weight: 600;
     background: -webkit-linear-gradient(#57A0D3, #FFFFFF);
 }
 
 .previous {
+    font-size: 15px;
+    font-weight: 600;
     background: -webkit-linear-gradient(#FF0800, #FFFFFF);
 }
 

@@ -118,11 +118,6 @@
                                             <input matInput placeholder="Adultos" formControlName='qtdAdulto'
                                                 type="number">
                                         </mat-form-field>
-
-                                        <mat-form-field class="half">
-                                            <input matInput placeholder="Crianças" formControlName='qtdCrianca'
-                                                type="number">
-                                        </mat-form-field>
                                     </div>
 
                                     <div class="full-w col">
@@ -136,6 +131,11 @@
 
                                         <mat-form-field class="half">
                                             <input matInput placeholder="Valor Máximo" formControlName='valorMax'
+                                                type="number">
+                                        </mat-form-field>
+
+                                        <mat-form-field class="half">
+                                            <input matInput placeholder="Crianças" formControlName='qtdCrianca'
                                                 type="number">
                                         </mat-form-field>
                                     </div>
@@ -153,7 +153,8 @@
                                     <button mat-button matStepperNext class="next">Próximo</button>
                                 </div>
                                 <div class="full-w row end mx-md" *ngIf="isLogged">
-                                    <button mat-button matStepperNext class="next" (click)="showList()">Realizar Busca</button>
+                                    <button mat-button matStepperNext class="next" (click)="showList()">Realizar
+                                        Busca</button>
                                 </div>
                             </div>
                         </form>

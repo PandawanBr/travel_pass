@@ -1,9 +1,29 @@
 <div class="full-w row center-w">
     <mat-card class="card col opacity-low">
-        <mat-card-content>
-            <div class="full-w card-item">
-
+        <mat-card-content class="list">
+            <div class="full-w card-item row center-h click" *ngFor="let item of listTrips">
+                <div class="image" [ngStyle]="{'background-image': 'url(' + item.image + ')'}">
+                </div>
+                <div class="full-w col center w">
+                    <div class="full-w row">
+                        <div class="half start mx-md">
+                            <span class="text-style text-sm">Cidade: {{item.name}}</span>
+                        </div>
+                        <div class="half start mx-md">
+                            <span class="text-style text-sm">Valor: {{ item.value | currency:'R$' }}</span>
+                        </div>
+                    </div>
+                    <div class="full-w row mx-md my-md">
+                        <span class="text-style text-sm">{{item.description}}</span>
+                    </div>
+                </div>
             </div>
         </mat-card-content>
+        <mat-card-actions style="padding: 0px">
+            <div class="button-line">
+                <button mat-raised-button (click)="voltar()" class="button cancel-color">Voltar</button>
+                <button mat-raised-button (click)="homePage()" class="button normal-color">Home Page</button>
+            </div>
+        </mat-card-actions>
     </mat-card>
 </div>
