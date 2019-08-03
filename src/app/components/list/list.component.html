@@ -1,7 +1,7 @@
 <div class="full-w row center-w">
     <mat-card class="card col opacity-low">
         <mat-card-content class="list">
-            <div class="full-w card-item row center-h click" *ngFor="let item of listTrips">
+            <div class="full-w card-item row center-h click" (click)="showTrip(item)" *ngFor="let item of listTrips">
                 <div class="image" [ngStyle]="{'background-image': 'url(' + item.image + ')'}">
                 </div>
                 <div class="full-w col center w">
