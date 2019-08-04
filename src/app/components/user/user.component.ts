@@ -76,6 +76,7 @@ export class UserComponent implements OnInit {
   }
 
   updateForm(value: User) {
+    console.log('user pag', value);
     this.formGroup.patchValue(value);
     this.formGroupConvidadosAdultos.patchValue(value);
     this.formGroupConvidadosCriancas.patchValue(value);
@@ -86,6 +87,6 @@ export class UserComponent implements OnInit {
   }
 
   save() {
-    
+
   }
 }
