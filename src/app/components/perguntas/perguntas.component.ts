@@ -97,7 +97,7 @@ export class PerguntasComponent implements OnInit {
   createForm3() {
     this.formGroup3 = this.fb.group({
       dataInicio: [this.dataAtual, Validators.required],
-      dataFim: [this.dataAtual, Validators.required],
+      dataFim: [null, Validators.required],
       valorMin: [0],
       valorMax: [0],
       qtdCrianca: [0],

@@ -4,7 +4,6 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AdsenseModule } from 'ng2-adsense';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -25,11 +24,7 @@ registerLocaleData(ptBr);
     MaterialImportsModule,
     BrowserModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
-    AdsenseModule.forRoot({
-      adClient: 'ca-pub-7640562161899788',
-      adSlot: 7259870550,
-    }),
+    ReactiveFormsModule
   ],
   declarations: [
     HeaderComponent,

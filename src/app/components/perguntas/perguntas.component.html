@@ -1,9 +1,4 @@
 <div class="full-w row center-w">
-    <mat-card class="card-ads col opacity-low">
-        <ng-adsense [adClient]="'ca-pub-7640562161899788'" [adSlot]="7259870550" [display]="'inline-block'"
-            [width]="200" [height]="450"></ng-adsense>
-    </mat-card>
-
     <mat-card class="card col opacity-low">
         <mat-card-header>
             <mat-card-title class="text-style title">Filtros de Busca</mat-card-title>
@@ -49,7 +44,7 @@
                         </form>
                         <div class="full-w row my-md">
                             <div class="full-w row start">
-                                <button mat-button (click)="homePage()" class="previous">Home Page</button>
+                                <button mat-button (click)="homePage()" class="previous">Home</button>
                             </div>
                             <div class="full-w row end">
                                 <button mat-button matStepperNext class="next">Próximo</button>
@@ -157,7 +152,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <div class="full-w row my-md">
+                            <div class="full-w row mt-md">
                                 <div class="full-w row start mx-md">
                                     <button mat-button matStepperPrevious class="previous">Anterior</button>
                                 </div>
@@ -196,8 +191,9 @@
             </div>
         </mat-card-content>
     </mat-card>
-    <mat-card class="card-ads col opacity-low">
-        <ng-adsense [adClient]="'ca-pub-7640562161899788'" [adSlot]="7259870550" [display]="'inline-block'"
-            [width]="200" [height]="450"></ng-adsense>
+</div>
+<div class="row center-w">
+    <mat-card class="row center-w center-h card-ads opacity-low" style="display: flex">
+        <span class="text-style title">Insira seu anúncio aqui</span>
     </mat-card>
 </div>
