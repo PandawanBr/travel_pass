@@ -8,13 +8,16 @@
                 <div class="full-w row">
                     <div class="full-w col mx-md">
                         <mat-form-field>
-                            <input matInput placeholder="Nome" formControlName='nome'>
+                            <input matInput placeholder="Nome" formControlName='nome' required>
                             <mat-error *ngIf="formGroup.get('nome').hasError('required')">
                                 Campo não pode ser vazio
                             </mat-error>
                         </mat-form-field>
                         <mat-form-field class="mt-md">
-                            <input matInput placeholder="E-mail" formControlName='email'>
+                            <input matInput placeholder="E-mail" formControlName='email' required>
+                            <mat-error *ngIf="formGroup.get('email').hasError('required')">
+                                Campo não pode ser vazio
+                            </mat-error>
                             <mat-error
                                 *ngIf="formGroup.get('email').hasError('email') && !formGroup.get('email').hasError('required')">
                                 Insira um e-mail válido
@@ -24,7 +27,7 @@
                             <input matInput placeholder="Cidade" formControlName='cidade'>
                         </mat-form-field>
                         <mat-form-field class="mt-md">
-                            <input matInput placeholder="Senha" formControlName='senha'>
+                            <input matInput placeholder="Senha" type="password" formControlName='senha' required>
                             <mat-error *ngIf="formGroup.get('senha').hasError('required')">
                                 Campo não pode ser vazio
                             </mat-error>
@@ -45,15 +48,6 @@
                                 <input matInput placeholder="Número" formControlName='numero'>
                             </mat-form-field>
                         </div>
-                        <mat-form-field class="mt-md">
-                            <input matInput placeholder="Repita a Senha" formControlName='senha2'>
-                            <mat-error *ngIf="formGroup.get('senha2').hasError('required')">
-                                Campo não pode ser vazio
-                            </mat-error>
-                            <mat-error *ngIf="formGroup.get('senha').value != formGroup.get('senha2').value">
-                                Senhas diferentes, Digite novamente
-                            </mat-error>
-                        </mat-form-field>
                     </div>
                 </div>
             </form>
@@ -61,10 +55,10 @@
         <mat-card-actions>
             <div class="full-w row my-md">
                 <div class="full-w row end mx-md">
-                    <button mat-button (click)="homePage()" class="button normal-color">Home</button>
+                    <button mat-button type="button" (click)="homePage()" class="button cancel-color">Home</button>
                 </div>
                 <div class="full-w row start mx-md">
-                    <button mat-button class="button normal-color" (click)="cadastro()">Cadastrar</button>
+                    <button mat-button type="button" class="button normal-color" (click)="cadastro()">Cadastrar</button>
                 </div>
             </div>
         </mat-card-actions>

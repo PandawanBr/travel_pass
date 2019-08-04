@@ -14,6 +14,7 @@ import { NewUserComponent } from './components/new-user/new-user.component';
 import { PerguntasComponent } from './components/perguntas/perguntas.component';
 import { UserComponent } from './components/user/user.component';
 import { MaterialImportsModule } from './material-imports';
+import { UserService } from './service/user.service';
 registerLocaleData(ptBr);
 
 
@@ -42,6 +43,7 @@ registerLocaleData(ptBr);
     LoginComponent
   ],
   providers: [
+    UserService,
     {
       provide: LOCALE_ID,
       useValue: 'pt'

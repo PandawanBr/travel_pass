@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material';
 import { Router } from '@angular/router';
+import { UserService } from 'app/service/user.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private route: Router,
     private dialog: MatDialogRef<LoginComponent>,
-    private fb: FormBuilder) {
+    private fb: FormBuilder,
+    private userService: UserService) {
     this.createForm();
   }
 
@@ -25,17 +27,17 @@ export class LoginComponent implements OnInit {
 
   createForm() {
     this.formGroup = this.fb.group({
-      login: [null, Validators.required],
-      password: [null, Validators.required]
+      email: [null, Validators.required],
+      senha: [null, Validators.required]
     });
   }
 
   login() {
     if (this.formGroup.invalid) {
-      this.formGroup.get('login').markAsTouched();
-      this.formGroup.get('password').markAsTouched();
+      this.formGroup.get('email').markAsTouched();
+      this.formGroup.get('senha').markAsTouched();
       this.message = null;
-    } else if ((this.formGroup.get('login').value === 'Rodrigo') && (this.formGroup.get('password').value === '1234')) {
+    } else if (this.userService.makeLogin(this.formGroup.value)) {
       this.message = null;
       this.dialog.close('login');
     } else {

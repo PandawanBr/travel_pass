@@ -7,14 +7,14 @@
   </div>
   <form [formGroup]="formGroup" novalidate class="formGroup">
     <mat-form-field class="full-w mx">
-      <input formControlName='login' matInput placeholder="E-mail" required>
-      <mat-error *ngIf="formGroup.get('login').touched && formGroup.get('login').errors?.required">
+      <input formControlName='email' matInput placeholder="E-mail" required>
+      <mat-error *ngIf="formGroup.get('email').touched && formGroup.get('email').errors?.required">
         Campo não pode estar vazio
       </mat-error>
     </mat-form-field>
     <mat-form-field class="full-w mx">
-      <input formControlName='password' type="password" matInput placeholder="Senha" required>
-      <mat-error *ngIf="formGroup.get('password').touched && formGroup.get('password').errors?.required">
+      <input formControlName='senha' type="password" matInput placeholder="Senha" required>
+      <mat-error *ngIf="formGroup.get('senha').touched && formGroup.get('senha').errors?.required">
         Campo não pode estar vazio
       </mat-error>
     </mat-form-field>
