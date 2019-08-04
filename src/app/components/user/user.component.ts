@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl, FormGroupDirective, NgForm } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material';
 import { Router } from '@angular/router';
+import { UserService } from 'app/service/user.service';
+import { User } from 'app/model/user.model';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -24,14 +26,15 @@ export class UserComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private route: Router
-  ) {
+    private route: Router,
+    private userService: UserService) {
     this.createForm();
     this.createFormConvidadosAdultos();
     this.createFormConvidadosCriancas();
   }
 
   ngOnInit() {
+    this.userService.currentLoggedUser.subscribe((user: User) => this.updateForm(user));
   }
 
   createForm() {
@@ -42,7 +45,7 @@ export class UserComponent implements OnInit {
       cidade: [null],
       bairro: [null],
       telefone: [null],
-      email: [null, Validators.email]
+      email: [null]
     });
   }
 
@@ -72,11 +75,17 @@ export class UserComponent implements OnInit {
     });
   }
 
+  updateForm(value: User) {
+    this.formGroup.patchValue(value);
+    this.formGroupConvidadosAdultos.patchValue(value);
+    this.formGroupConvidadosCriancas.patchValue(value);
+  }
+
   homePage() {
     this.route.navigate(['/']);
   }
 
   save() {
-
+    
   }
 }

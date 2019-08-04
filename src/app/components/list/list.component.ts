@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from 'app/service/user.service';
 
 @Component({
   selector: 'app-list',
@@ -10,9 +11,15 @@ export class ListComponent implements OnInit {
 
   listTrips = LIST_TRIPS;
 
-  constructor(private route: Router) { }
+  isLogged = false;
+
+  constructor(
+    private route: Router,
+    private userService: UserService
+  ) { }
 
   ngOnInit() {
+    this.userService.currentIsLoggedUser.subscribe(res => this.isLogged = res);
   }
 
   voltar() {

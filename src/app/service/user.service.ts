@@ -12,13 +12,16 @@ export class UserService {
   private users = new BehaviorSubject<User[]>(null);
   currentUsers = this.users.asObservable();
 
-  private loggedUser = new BehaviorSubject<boolean>(false);
+  private loggedUser = new BehaviorSubject<User>(null);
   currentLoggedUser = this.loggedUser.asObservable();
+
+  private isloggedUser = new BehaviorSubject<boolean>(false);
+  currentIsLoggedUser = this.isloggedUser.asObservable();
 
   constructor() { }
 
   changeStatusUser(value: boolean): void {
-    this.loggedUser.next(value);
+    this.isloggedUser.next(value);
   }
 
   addUser(value: User): void {
@@ -26,11 +29,13 @@ export class UserService {
     this.users.next(this.userList);
   }
 
+  setCurrentUser(value: User) {
+    this.loggedUser.next(value);
+  }
+
   makeLogin(value: User): boolean {
-    console.log('input', value);
     if (this.userList.length > 0) {
       for (let i = 0; i <= this.userList.length; i++) {
-        console.log('for', this.userList[i]);
         return (this.userList[i].email === value.email && this.userList[i].senha === value.senha);
       }
     }

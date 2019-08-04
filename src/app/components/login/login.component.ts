@@ -38,6 +38,8 @@ export class LoginComponent implements OnInit {
       this.formGroup.get('senha').markAsTouched();
       this.message = null;
     } else if (this.userService.makeLogin(this.formGroup.value)) {
+      this.userService.changeStatusUser(true);
+      this.userService.setCurrentUser(this.formGroup.value);
       this.message = null;
       this.dialog.close('login');
     } else {

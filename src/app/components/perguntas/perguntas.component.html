@@ -109,6 +109,10 @@
                                                 formControlName="dataInicio">
                                             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                                             <mat-datepicker #picker></mat-datepicker>
+                                            <mat-error
+                                                *ngIf="formGroup3.get('dataInicio').touched && formGroup3.get('dataInicio').errors?.required">
+                                                Campo não pode estar vazio
+                                            </mat-error>
                                         </mat-form-field>
 
                                         <mat-form-field class="half">
@@ -134,6 +138,10 @@
                                             <mat-datepicker-toggle matSuffix [for]="picker2">
                                             </mat-datepicker-toggle>
                                             <mat-datepicker #picker2></mat-datepicker>
+                                            <mat-error
+                                                *ngIf="formGroup3.get('dataFim').touched && formGroup3.get('dataFim').errors?.required">
+                                                Campo não pode estar vazio
+                                            </mat-error>
                                         </mat-form-field>
 
                                         <mat-form-field class="half">
@@ -160,17 +168,17 @@
                                     <button mat-button (click)="stepper.reset()" class="previous">Limpar
                                         Formulário</button>
                                 </div>
-                                <div class="full-w row end mx-md" *ngIf="!isLogged">
+                                <div class="full-w row end mx-md" *ngIf="isLogged">
                                     <button mat-button matStepperNext class="next">Próximo</button>
                                 </div>
-                                <div class="full-w row end mx-md" *ngIf="isLogged">
+                                <div class="full-w row end mx-md" *ngIf="!isLogged">
                                     <button mat-button matStepperNext class="next" (click)="showList()">Realizar
                                         Busca</button>
                                 </div>
                             </div>
                         </form>
                     </mat-step>
-                    <mat-step *ngIf="!isLogged">
+                    <mat-step *ngIf="isLogged">
                         <ng-template matStepLabel>Finalizar</ng-template>
 
                         <div class="full-w center-w center-h row my-lg">

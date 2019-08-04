@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import * as moment from 'moment';
 import { Router } from '@angular/router';
+import { UserService } from 'app/service/user.service';
 
 @Component({
   selector: 'app-perguntas',
@@ -10,8 +11,7 @@ import { Router } from '@angular/router';
 })
 export class PerguntasComponent implements OnInit {
 
-  isLogged = true;
-
+  isLogged = false;
   formGroup1: FormGroup;
   formGroup2: FormGroup;
   formGroup3: FormGroup;
@@ -23,11 +23,13 @@ export class PerguntasComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private router: Router
-  ) {
+    private router: Router,
+    private userService: UserService) {
   }
 
   ngOnInit() {
+    this.userService.currentIsLoggedUser.subscribe(res => this.isLogged = res);
+
     this.dataAtual = moment(Date.now()).format('YYYY-MM-DD');
     this.createForm1();
     this.createForm2();
@@ -114,6 +116,12 @@ export class PerguntasComponent implements OnInit {
   }
 
   showList() {
-    this.router.navigate(['/list']);
+    if (this.formGroup3.invalid) {
+      Object.keys(this.formGroup3.controls).forEach(key => {
+        this.formGroup3.controls[key].markAsTouched();
+      });
+    } else {
+      this.router.navigate(['/list']);
+    }
   }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from 'app/service/user.service';
+import { User } from 'app/model/user.model';
 
 @Component({
   selector: 'app-header',
@@ -8,11 +10,18 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  isLogged = true;
+  isLogged = false;
+  currentUser: User = null;
 
-  constructor(private route: Router) { }
+  constructor(
+    private route: Router,
+    private userService: UserService
+  ) { }
 
   ngOnInit() {
+    this.userService.currentIsLoggedUser.subscribe(res => this.isLogged = res);
+
+    this.userService.currentLoggedUser.subscribe((user: User) => this.currentUser = user);
   }
 
   home() {
