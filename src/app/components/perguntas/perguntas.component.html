@@ -1,4 +1,9 @@
 <div class="full-w row center-w">
+    <mat-card class="card-ads col opacity-low">
+        <ng-adsense [adClient]="'ca-pub-7640562161899788'" [adSlot]="7259870550" [display]="'inline-block'"
+            [width]="200" [height]="450"></ng-adsense>
+    </mat-card>
+
     <mat-card class="card col opacity-low">
         <mat-card-header>
             <mat-card-title class="text-style title">Filtros de Busca</mat-card-title>
@@ -30,7 +35,8 @@
                                     </mat-checkbox>
                                     <mat-checkbox formControlName="pergunta8" [required]='form1Required'>Chile
                                     </mat-checkbox>
-                                    <mat-checkbox formControlName="pergunta9" [required]='form1Required'>África do Sul
+                                    <mat-checkbox formControlName="pergunta9" [required]='form1Required'>África do
+                                        Sul
                                     </mat-checkbox>
                                     <mat-checkbox formControlName="pergunta10" [required]='form1Required'>China
                                     </mat-checkbox>
@@ -72,7 +78,8 @@
                                 <div class="full-w col">
                                     <mat-checkbox formControlName="pergunta19" [required]='form2Required'>Cidades
                                         Turísticas</mat-checkbox>
-                                    <mat-checkbox formControlName="pergunta20" [required]='form2Required'>Gastronômica
+                                    <mat-checkbox formControlName="pergunta20" [required]='form2Required'>
+                                        Gastronômica
                                     </mat-checkbox>
                                     <mat-checkbox formControlName="pergunta21" [required]='form2Required'>Férias
                                     </mat-checkbox>
@@ -115,8 +122,12 @@
                                         </mat-form-field>
 
                                         <mat-form-field class="half">
-                                            <input matInput placeholder="Adultos" formControlName='qtdAdulto'
-                                                type="number">
+                                            <mat-select placeholder="Adultos" formControlName='qtdAdulto'>
+                                                <mat-option value="1">1</mat-option>
+                                                <mat-option value="2">2</mat-option>
+                                                <mat-option value="3">3</mat-option>
+                                                <mat-option value="4">4</mat-option>
+                                            </mat-select>
                                         </mat-form-field>
                                     </div>
 
@@ -125,7 +136,8 @@
                                             <input matInput [min]="formGroup3.get('dataInicio').value"
                                                 [matDatepicker]="picker2" placeholder="Data Retorno"
                                                 formControlName="dataFim">
-                                            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                            <mat-datepicker-toggle matSuffix [for]="picker2">
+                                            </mat-datepicker-toggle>
                                             <mat-datepicker #picker2></mat-datepicker>
                                         </mat-form-field>
 
@@ -135,8 +147,12 @@
                                         </mat-form-field>
 
                                         <mat-form-field class="half">
-                                            <input matInput placeholder="Crianças" formControlName='qtdCrianca'
-                                                type="number">
+                                            <mat-select placeholder="Crianças" formControlName='qtdCrianca'>
+                                                <mat-option value="1">1</mat-option>
+                                                <mat-option value="2">2</mat-option>
+                                                <mat-option value="3">3</mat-option>
+                                                <mat-option value="4">4</mat-option>
+                                            </mat-select>
                                         </mat-form-field>
                                     </div>
                                 </div>
@@ -168,7 +184,8 @@
                         </div>
                         <div class="full-w row my-md">
                             <div class="full-w row start mx-md">
-                                <button mat-button (click)="stepper.reset()" class="previous">Limpar Formulário</button>
+                                <button mat-button (click)="stepper.reset()" class="previous">Limpar
+                                    Formulário</button>
                             </div>
                             <div class="full-w row center-w mx-md">
                                 <button mat-button class="next" (click)="newUser()">Cadastro</button>
@@ -178,5 +195,9 @@
                 </mat-horizontal-stepper>
             </div>
         </mat-card-content>
+    </mat-card>
+    <mat-card class="card-ads col opacity-low">
+        <ng-adsense [adClient]="'ca-pub-7640562161899788'" [adSlot]="7259870550" [display]="'inline-block'"
+            [width]="200" [height]="450"></ng-adsense>
     </mat-card>
 </div>

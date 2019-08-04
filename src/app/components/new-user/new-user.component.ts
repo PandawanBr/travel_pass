@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-user',
@@ -10,7 +11,9 @@ export class NewUserComponent implements OnInit {
 
   formGroup: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private route: Router) {
     this.createForm();
   }
 
@@ -20,13 +23,18 @@ export class NewUserComponent implements OnInit {
   createForm() {
     this.formGroup = this.fb.group({
       nome: [null, Validators.required],
-      sobrenome: [null, Validators.required],
       endereco: [null],
       numero: [null],
       cidade: [null],
       bairro: [null],
       telefone: [null],
-      email: [null]
+      email: [null, Validators.email],
+      senha: [null, Validators.required],
+      senha2: [null, Validators.required]
     });
+  }
+
+  cadastro() {
+    this.route.navigate(['/']);
   }
 }

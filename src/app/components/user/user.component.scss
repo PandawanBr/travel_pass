@@ -1,5 +1,6 @@
 .card {
     width: 80%;
+    height: calc(100vh - 315px);
     border-radius: 25px;
 }
 
@@ -15,4 +16,14 @@
 
 .sub-title {
     font-size: 20px;
+}
+
+.save {
+    font-size: 15px;
+    font-weight: 600;
+    background: -webkit-linear-gradient(#57A0D3, #FFFFFF);
+}
+
+.tab-h {
+    height: calc(100vh - 430px);
 }

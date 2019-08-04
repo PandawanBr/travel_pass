@@ -4,34 +4,55 @@
             <mat-card-title class="text-style title">Novo Usuário</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <form [formGroup]="formGroup" novalidate>
+            <form [formGroup]="formGroup" class="mt-md" novalidate>
                 <div class="full-w row">
                     <div class="full-w col mx-md">
                         <mat-form-field>
                             <input matInput placeholder="Nome" formControlName='nome'>
+                            <mat-error *ngIf="formGroup.get('nome').hasError('required')">
+                                Campo não pode ser vazio
+                            </mat-error>
                         </mat-form-field>
                         <mat-form-field class="mt-md">
                             <input matInput placeholder="E-mail" formControlName='email'>
+                            <mat-error
+                                *ngIf="formGroup.get('email').hasError('email') && !formGroup.get('email').hasError('required')">
+                                Insira um e-mail válido
+                            </mat-error>
                         </mat-form-field>
                         <mat-form-field class="mt-md">
                             <input matInput placeholder="Cidade" formControlName='cidade'>
                         </mat-form-field>
                         <mat-form-field class="mt-md">
-                            <input matInput placeholder="Endereço" formControlName='endereco'>
+                            <input matInput placeholder="Senha" formControlName='senha'>
+                            <mat-error *ngIf="formGroup.get('senha').hasError('required')">
+                                Campo não pode ser vazio
+                            </mat-error>
                         </mat-form-field>
                     </div>
                     <div class="full-w col mx-md">
                         <mat-form-field>
-                            <input matInput placeholder="Sobrenome" formControlName='sobrenome'>
-                        </mat-form-field>
-                        <mat-form-field class="mt-md">
                             <input matInput placeholder="Telefone" formControlName='telefone'>
                         </mat-form-field>
                         <mat-form-field class="mt-md">
                             <input matInput placeholder="Bairro" formControlName='bairro'>
                         </mat-form-field>
+                        <div class="row full-w mt-md">
+                            <mat-form-field class="full-w">
+                                <input matInput placeholder="Endereço" formControlName='endereco'>
+                            </mat-form-field>
+                            <mat-form-field class="mx-md" style="width: 30%">
+                                <input matInput placeholder="Número" formControlName='numero'>
+                            </mat-form-field>
+                        </div>
                         <mat-form-field class="mt-md">
-                            <input matInput placeholder="Número" formControlName='numero'>
+                            <input matInput placeholder="Repita a Senha" formControlName='senha2'>
+                            <mat-error *ngIf="formGroup.get('senha2').hasError('required')">
+                                Campo não pode ser vazio
+                            </mat-error>
+                            <mat-error *ngIf="formGroup.get('senha').value != formGroup.get('senha2').value">
+                                Senhas diferentes, Digite novamente
+                            </mat-error>
                         </mat-form-field>
                     </div>
                 </div>
@@ -43,7 +64,7 @@
                     <button mat-button (click)="homePage()" class="button normal-color">Home Page</button>
                 </div>
                 <div class="full-w row start mx-md">
-                    <button mat-button class="button normal-color">Cadastrar</button>
+                    <button mat-button class="button normal-color" (click)="cadastro()">Cadastrar</button>
                 </div>
             </div>
         </mat-card-actions>

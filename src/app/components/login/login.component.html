@@ -7,7 +7,7 @@
   </div>
   <form [formGroup]="formGroup" novalidate class="formGroup">
     <mat-form-field class="full-w mx">
-      <input formControlName='login' matInput placeholder="Login" required>
+      <input formControlName='login' matInput placeholder="E-mail" required>
       <mat-error *ngIf="formGroup.get('login').touched && formGroup.get('login').errors?.required">
         Campo não pode estar vazio
       </mat-error>
