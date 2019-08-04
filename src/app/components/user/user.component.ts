@@ -34,7 +34,9 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userService.currentLoggedUser.subscribe((user: User) => this.updateForm(user));
+    this.userService.currentLoggedUser.subscribe((user: User) => {
+      if (user) this.updateForm(user);
+    });
   }
 
   createForm() {

@@ -5,6 +5,7 @@ import { PerguntasComponent } from './components/perguntas/perguntas.component';
 import { ListComponent } from './components/list/list.component';
 import { UserComponent } from './components/user/user.component';
 import { NewUserComponent } from './components/new-user/new-user.component';
+import { UserService } from './service/user.service';
 
 
 const routes: Routes = [
@@ -22,7 +23,9 @@ const routes: Routes = [
   },
   {
     path: 'user',
-    component: UserComponent
+    component: UserComponent,
+    canActivate: [UserService],
+    redirectTo: ''
   },
   {
     path: 'new-user',

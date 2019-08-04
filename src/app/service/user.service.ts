@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { User } from 'app/model/user.model';
+import { CanActivate } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class UserService implements CanActivate {
 
   private userList: User[] = [];
 
@@ -19,6 +20,10 @@ export class UserService {
   currentIsLoggedUser = this.isloggedUser.asObservable();
 
   constructor() { }
+
+  canActivate() {
+    return this.isloggedUser;
+  }
 
   changeStatusUser(value: boolean): void {
     this.isloggedUser.next(value);
@@ -36,7 +41,10 @@ export class UserService {
   makeLogin(value: User): boolean {
     if (this.userList.length > 0) {
       for (let i = 0; i <= this.userList.length; i++) {
-        return (this.userList[i].email === value.email && this.userList[i].senha === value.senha);
+        if (this.userList[i].email === value.email && this.userList[i].senha === value.senha) {
+          this.setCurrentUser(this.userList[i]);
+          return true;
+        }
       }
     }
     return false;

@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
+#Server Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d740e61e-52e3-4a14-8b06-f468be2520a5/deploy-status)](https://app.netlify.com/sites/tcc-travelpass/deploys)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
