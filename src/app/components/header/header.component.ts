@@ -27,4 +27,12 @@ export class HeaderComponent implements OnInit {
   home() {
     this.route.navigate(['/']);
   }
+
+  showUser() {
+    this.route.navigate(['/user']);
+  }
+
+  logout() {
+    this.userService.logout();
+  }
 }

@@ -4,8 +4,23 @@
     height: 25vh;
     width: 100%;
     flex-direction: row;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    height: 25vh;
+}
+
+.avatar {
+    height: 23vh;
+    width: 23vh;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 23vh 23vh;
 }
 
 .color {
@@ -23,6 +38,18 @@
     margin-left: 30px;
     margin-top: 15px;
     cursor: pointer;
+}
+
+.center-logo {
+    justify-content: center;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-40 {
+    width: 40%;
 }
 
 .name {
@@ -44,4 +71,19 @@
     background: -webkit-linear-gradient(#57A0D3, #333);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.info-style {
+    font-size: 30px;
+    background: -webkit-linear-gradient(#57A0D3, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.color {
+    color: #FF2400
 }

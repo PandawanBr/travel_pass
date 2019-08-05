@@ -4,7 +4,7 @@
             <mat-card-title class="text-style title">Usuário Logado</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <mat-tab-group class="tab-h">
+            <mat-tab-group class="tab-h" *ngIf="isLogged">
                 <mat-tab label="Perfil">
                     <form [formGroup]="formGroup" class="mt-sm" novalidate>
                         <div class="full-w row">
@@ -13,15 +13,7 @@
                                     <input matInput placeholder="Nome" formControlName='nome' readonly>
                                 </mat-form-field>
                                 <mat-form-field class="mt-sm">
-                                    <input matInput placeholder="E-mail" formControlName='email'
-                                        [errorStateMatcher]="matcher">
-                                    <mat-error
-                                        *ngIf="formGroup.get('email').hasError('email') && !formGroup.get('email').hasError('required')">
-                                        Insira um e-mail válido
-                                    </mat-error>
-                                    <mat-error *ngIf="formGroup.get('email').hasError('required')">
-                                        Campo não pode ser vazio
-                                    </mat-error>
+                                    <input matInput placeholder="E-mail" formControlName='email' readonly>
                                 </mat-form-field>
                                 <mat-form-field class="mt-sm">
                                     <input matInput placeholder="Cidade" formControlName='cidade'>

@@ -13,6 +13,12 @@ export class NewUserComponent implements OnInit {
 
   formGroup: FormGroup;
 
+  avatarArray = [
+    '../../../assets/avatar1.png',
+    '../../../assets/avatar2.png',
+    '../../../assets/avatar3.png'
+  ];
+
   constructor(
     private fb: FormBuilder,
     private route: Router,
@@ -38,7 +44,12 @@ export class NewUserComponent implements OnInit {
 
   formToModel(): User {
     const model: User = Object.assign({}, this.formGroup.value);
+    model.avatar = this.randomAvatar();
     return model;
+  }
+
+  randomAvatar(): string {
+    return this.avatarArray[Math.floor(Math.random() * 3)];
   }
 
   cadastro() {

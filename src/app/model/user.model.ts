@@ -1,4 +1,6 @@
 export class User {
+    id?: number;
+    avatar?: string;
     nome?: string;
     senha?: string;
     endereco?: string;

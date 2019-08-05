@@ -1,8 +1,24 @@
 <div class="height">
-    <div class="logo" (click)="home()"></div>
-    <div class="name">
-        <span class="text-style">
-            Travel Pass
-        </span>
+    <div class="userInfo" *ngIf="isLogged">
+        <div class="avatar" [ngStyle]="{'background-image': 'url(' + currentUser.avatar + ')'}">
+        </div>
+        <div class="col">
+            <span class="info-style mt-sm pointer" (click)="showUser()">{{currentUser.nome}}</span>
+            <span class="info-style mt-sm">{{currentUser.telefone}}</span>
+            <span class="info-style mt-sm">{{currentUser.email}}</span>
+            <button mat-icon-button class="mt-md color" (click)="logout()" matTooltip="Logout">
+                <mat-icon>no_meeting_room</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="full-w row" [ngClass]="{'center-logo': !isLogged, 'w-40': isLogged}">
+        <div class="logo" (click)="home()"></div>
+        <div class="name">
+            <span class="text-style">
+                Travel Pass
+            </span>
+        </div>
+    </div>
+    <div *ngIf="isLogged" class="row end" [ngClass]="{'w-30': isLogged}">
     </div>
 </div>

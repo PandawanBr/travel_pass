@@ -25,12 +25,11 @@ const routes: Routes = [
     path: 'user',
     component: UserComponent,
     canActivate: [UserService],
-    redirectTo: ''
   },
   {
     path: 'new-user',
     component: NewUserComponent
-  },
+  }
 ];
 
 @NgModule({

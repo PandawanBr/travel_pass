@@ -22,7 +22,7 @@ export class UserService implements CanActivate {
   constructor() { }
 
   canActivate() {
-    return this.isloggedUser;
+    return this.isloggedUser.getValue();
   }
 
   changeStatusUser(value: boolean): void {
@@ -30,6 +30,7 @@ export class UserService implements CanActivate {
   }
 
   addUser(value: User): void {
+    value.id = this.userList.length + 1;
     this.userList.push(value);
     this.users.next(this.userList);
   }
@@ -48,5 +49,14 @@ export class UserService implements CanActivate {
       }
     }
     return false;
+  }
+
+  logout() {
+    this.isloggedUser.next(false);
+    this.loggedUser.next(null);
+  }
+
+  updateUser(value: User) {
+    this.loggedUser.next(value);
   }
 }
