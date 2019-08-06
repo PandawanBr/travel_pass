@@ -177,7 +177,7 @@
                             <div class="full-w row start mx-md">
                                 <button mat-button matStepperPrevious class="previous">Anterior</button>
                             </div>
-                            <div class="full-w row center-w mx-md">
+                            <div class="full-w row center-w mx-md" *ngIf="isLogged">
                                 <button mat-button (click)="stepper.reset()" class="previous">Limpar
                                     Formulário</button>
                             </div>
