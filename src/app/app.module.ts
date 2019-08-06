@@ -15,6 +15,7 @@ import { PerguntasComponent } from './components/perguntas/perguntas.component';
 import { UserComponent } from './components/user/user.component';
 import { MaterialImportsModule } from './material-imports';
 import { UserService } from './service/user.service';
+import { ListDetailComponent } from './components/list-detail/list-detail.component';
 registerLocaleData(ptBr);
 
 
@@ -35,12 +36,14 @@ registerLocaleData(ptBr);
     PerguntasComponent,
     ListComponent,
     UserComponent,
-    NewUserComponent
+    NewUserComponent,
+    ListDetailComponent
   ],
   exports: [
   ],
   entryComponents: [
-    LoginComponent
+    LoginComponent,
+    ListDetailComponent
   ],
   providers: [
     UserService,

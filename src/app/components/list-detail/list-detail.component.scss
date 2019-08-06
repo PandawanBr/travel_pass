@@ -1,0 +1,26 @@
+.image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+}
+
+.text-style {
+    background: -webkit-linear-gradient(#57A0D3, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.font-lg {
+    font-size: 30px;
+}
+
+.font-sm {
+    font-size: 20px;
+}
+
+.detail {
+    height: 200px;
+    overflow-y: scroll;
+}

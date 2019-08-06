@@ -1,0 +1,14 @@
+<div class="full-w col">
+    <div class="full-w row" style="height: 100px;">
+        <div class="image" [ngStyle]="{'background-image': 'url(' + data.image + ')'}">
+        </div>
+        <div class="col center-w center-h" style="margin-left: 50px;">
+            <span class="text-style font-lg">Nome: {{data.name}}</span>
+            <span class="text-style font-lg mt-sm">Valor: {{data.value | currency:'R$'}}</span>
+        </div>
+    </div>
+
+    <div class="full-w col mt-md detail">
+        <span class="text-style font-sm">{{data.detail}}</span>
+    </div>
+</div>
