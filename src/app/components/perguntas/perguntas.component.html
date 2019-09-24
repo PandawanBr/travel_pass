@@ -1,49 +1,50 @@
 <div class="full-w row center-w">
     <mat-card class="card col opacity-low">
         <mat-card-header>
-            <mat-card-title class="text-style title">Filtros de Busca</mat-card-title>
+            <mat-card-title class="text-style title">Informações do Perfil</mat-card-title>
         </mat-card-header>
         <mat-card-content>
             <div class="full-w row">
                 <mat-horizontal-stepper [linear]='true' #stepper class="full-w">
                     <mat-step [stepControl]="formGroup1">
                         <form [formGroup]="formGroup1" class="h-100">
-                            <ng-template matStepLabel>Locais de preferencia</ng-template>
+                            <ng-template matStepLabel>Características da Pessoa</ng-template>
                             <div class="full-w row">
                                 <div class="full-w col">
-                                    <mat-checkbox formControlName="pergunta1" [required]='form1Required'>Brasil
+                                    <mat-checkbox formControlName="pergunta1" [required]='form1Required'>Esportes
+                                        Radicais
                                     </mat-checkbox>
-                                    <mat-checkbox formControlName="pergunta2" [required]='form1Required'>Inglaterra
+                                    <mat-checkbox formControlName="pergunta2" [required]='form1Required'>Dança
                                     </mat-checkbox>
-                                    <mat-checkbox formControlName="pergunta3" [required]='form1Required'>Irlanda
-                                    </mat-checkbox>
-                                </div>
-
-                                <div class="full-w col">
-                                    <mat-checkbox formControlName="pergunta4" [required]='form1Required'>França
-                                    </mat-checkbox>
-                                    <mat-checkbox formControlName="pergunta5" [required]='form1Required'>Nova York
-                                    </mat-checkbox>
-                                    <mat-checkbox formControlName="pergunta6" [required]='form1Required'>Orlando
+                                    <mat-checkbox formControlName="pergunta3" [required]='form1Required'>Tecnologia
                                     </mat-checkbox>
                                 </div>
 
                                 <div class="full-w col">
-                                    <mat-checkbox formControlName="pergunta7" [required]='form1Required'>Peru
+                                    <mat-checkbox formControlName="pergunta4" [required]='form1Required'>Museu
                                     </mat-checkbox>
-                                    <mat-checkbox formControlName="pergunta8" [required]='form1Required'>Chile
+                                    <mat-checkbox formControlName="pergunta5" [required]='form1Required'>Livros
                                     </mat-checkbox>
-                                    <mat-checkbox formControlName="pergunta9" [required]='form1Required'>África do
-                                        Sul
+                                    <mat-checkbox formControlName="pergunta6" [required]='form1Required'>Esportes
+                                        Aquáticos
                                     </mat-checkbox>
                                 </div>
 
                                 <div class="full-w col">
-                                    <mat-checkbox formControlName="pergunta10" [required]='form1Required'>China
+                                    <mat-checkbox formControlName="pergunta7" [required]='form1Required'>Restaurantes
                                     </mat-checkbox>
-                                    <mat-checkbox formControlName="pergunta11" [required]='form1Required'>Taiwan
+                                    <mat-checkbox formControlName="pergunta8" [required]='form1Required'>Bares
                                     </mat-checkbox>
-                                    <mat-checkbox formControlName="pergunta12" [required]='form1Required'>Japão
+                                    <mat-checkbox formControlName="pergunta9" [required]='form1Required'>Baladas
+                                    </mat-checkbox>
+                                </div>
+
+                                <div class="full-w col">
+                                    <mat-checkbox formControlName="pergunta10" [required]='form1Required'>Meio Ambiente
+                                    </mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta11" [required]='form1Required'>Filmes
+                                    </mat-checkbox>
+                                    <mat-checkbox formControlName="pergunta12" [required]='form1Required'>Teatro
                                     </mat-checkbox>
                                 </div>
                             </div>
@@ -62,9 +63,9 @@
                             <ng-template matStepLabel>Tipo de Viagem</ng-template>
                             <div class="full-w row">
                                 <div class="full-w col">
-                                    <mat-checkbox formControlName="pergunta13" [required]='form2Required'>Aereo
+                                    <mat-checkbox formControlName="pergunta13" [required]='form2Required'>Desertos
                                     </mat-checkbox>
-                                    <mat-checkbox formControlName="pergunta14" [required]='form2Required'>Terrestre
+                                    <mat-checkbox formControlName="pergunta14" [required]='form2Required'>Relax
                                     </mat-checkbox>
                                     <mat-checkbox formControlName="pergunta15" [required]='form2Required'>Praia
                                     </mat-checkbox>
@@ -85,7 +86,8 @@
                                     <mat-checkbox formControlName="pergunta20" [required]='form2Required'>
                                         Gastronômica
                                     </mat-checkbox>
-                                    <mat-checkbox formControlName="pergunta21" [required]='form2Required'>Férias
+                                    <mat-checkbox formControlName="pergunta21" [required]='form2Required'>Parque
+                                        Temático
                                     </mat-checkbox>
                                 </div>
 
@@ -194,8 +196,7 @@
                         <ng-template matStepLabel>Finalizar</ng-template>
 
                         <div class="full-w center-w center-h row my-lg">
-                            <span class="sub-title text-style">Cadastre-se já para garantir sua passagem <br> e não
-                                deixar de último momento</span>
+                            <span class="sub-title text-style">Cadastre-se e vejas as nossas recomendações</span>
                         </div>
                         <div class="full-w row my-md">
                             <div class="full-w row start mx-md">
